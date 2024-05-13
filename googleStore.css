@@ -18,6 +18,8 @@ header {
 
 nav {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
   padding: 8px 10px;
 }
@@ -283,13 +285,9 @@ footer {
   gap:30px;
   background-color: #F8F9FB;
   align-items: center;
+  justify-content: space-between;
   color: #576257;
 }
-
- footer {
-  display: flex;
-  justify-content: space-between;
- }
 
  .footer-icons {
   margin-left: 140px;
@@ -297,26 +295,23 @@ footer {
   gap: 10px;
 }
 
-.flag {
+.spain {
   display: flex;
-  margin-right: 8px;;
+  align-items: center;
+  gap: 5px;
 }
 
-.footer-info {
-  margin-right: 140px;
+.footer-info-list {
   display: flex;
-}
-
-.footer-info-list ul {
-  display: flex;
+  align-items: center;
   gap: 50px;
   padding: 0;
   list-style: none;
   font-size: 8px;
+  margin-right: 140px;
 }
 
 /******************* MEDIA QUERIES *******************/
-
 /* --------------- Tablet ---------------  */
 @media only screen and (max-width: 991px) {
   .imgs-device {
@@ -359,6 +354,12 @@ footer {
 @media only screen and (max-width: 576px) {
   .list-navbar ul {
     display: none;
+  }
+
+  .wrapper-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
   }
 
   .burguer {
@@ -412,6 +413,7 @@ footer {
   .footer-icons {
     margin-left: 0;
     gap: 40px;
+    margin-bottom: 15px;
   }
 
   .footer-icons img {
@@ -419,16 +421,18 @@ footer {
     width: auto;
   }
 
-  .footer-info-list ul {
-    display: block;
+  .footer-info-list {
+    flex-direction: column;
+    gap: 0;
+    margin-right: 0;
   }
 
-  footer-info-list ul li {
+  .footer-info-list li {
     padding-bottom: 10px;
     color: #576257;
   }
 
-  .footer-info {
-    margin-right: 0;
+  .footer-info-list li:first-child {
+    order: 1;
   }
 }
